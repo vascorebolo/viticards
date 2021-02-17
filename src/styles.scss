@@ -1,0 +1,43 @@
+.icon {
+  background-size: cover;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-bottom: -8px;
+
+  &-lira {
+    background-image: url('./images/lira.png');
+  }
+
+  &-grapes {
+    background-image: url('./images/grapes.png');
+  }
+
+  &-wine {
+    background-image: url('./images/wine.png');
+  }
+
+  &-vine {
+    background-image: url('./images/vine.png');
+  }
+
+  &-summer {
+    background-image: url('./images/summer.png');
+  }
+
+  &-winter {
+    background-image: url('./images/winter.png');
+  }
+
+  &-order {
+    background-image: url('./images/order.png');
+  }
+
+  &-card {
+    background-image: url('./images/anycard.png');
+  }
+
+  &-points {
+    background-image: url('./images/points.png');
+  }
+}
