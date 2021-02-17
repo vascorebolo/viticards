@@ -1,23 +1,19 @@
 import * as React from 'react'
-import {convert} from '../cards'
+import { convertToHtml } from '../cards'
 
 interface ICardShowProps {
   name: string,
   description: string
 }
 
-interface markupHtml {
-  __html: string | undefined
-}
-
-const CardShow: React.FC<ICardShowProps> = ({name, description}: ICardShowProps): JSX.Element => {
-  let converted: string = description || ''
-  converted = convert(converted)
+const CardShow: React.FC<ICardShowProps> = ({name, description = ''}: ICardShowProps): JSX.Element => {
+  let convertedHtml: string = description
+  convertedHtml = convertToHtml(convertedHtml)
 
   return (
     <div>
       <p>{name}</p>
-      <div dangerouslySetInnerHTML={{__html: converted}} />
+      <div dangerouslySetInnerHTML={{__html: convertedHtml}} />
     </div>
   )
 }
